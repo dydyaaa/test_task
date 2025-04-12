@@ -38,14 +38,7 @@ class HandlersReport(Report):
 
         try:
             with open(log_file_path, 'r') as file:
-                lines = file.readlines()
-                if not lines:
-                    print(f"Файл {log_file_path} пуст.")
-                    output_queue.put((stats, total_requests))
-                    return
-
-                for line in lines:
-                    # Пропускаем строки без django.request
+                for line in file:
                     if not django_pattern.search(line):
                         continue
 

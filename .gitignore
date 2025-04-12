@@ -1,5 +1,5 @@
 /__pycache__
 /.pytest_cache
-logs/app4.py
-logs/app5.py
+logs/app5.log
 /venv
+.DS_Store
